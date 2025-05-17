@@ -39,7 +39,6 @@ main {
 
 #ShopNow{
     visibility: inherit;
-    transition: none;
     border-radius: 0px;
     font-style: normal;
     border-width: 0px;
@@ -56,8 +55,6 @@ main {
     min-width: 0px;
     max-height: none;
     max-width: none;
-    opacity: 1;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform-origin: 50% 50% 0px;
     color: rgb(255, 255, 255);
 }
@@ -164,6 +161,17 @@ a:hover{
 
 footer{
   color: #ababab;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.appear {
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 

@@ -62,12 +62,12 @@ window.addEventListener('scroll', () => {
 
 document.styleSheets[0].insertRule(`
   .page-content.shifted {
-    transform: translateX(-250px);  /* Ajustează lățimea în funcție de lățimea sidebar-ului */
+    transform: translateX(-250px); 
     transition: transform 0.3s ease;
   }
 `, document.styleSheets[0].cssRules.length);
 
-// Resetăm transform-ul când lățimea ecranului este mare
+
 window.addEventListener('resize', () => {
   const windowWidth = window.innerWidth;
  
@@ -107,3 +107,23 @@ function updateCountdown() {
 }
 
 updateCountdown();
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const pTitle = document.querySelector(".p-title");
+    const pText = document.querySelector(".p-text");
+    const button = document.querySelector(".button");
+
+    setTimeout(() => {
+      pTitle.classList.replace("hidden", "appear");
+    }, 500);
+
+    setTimeout(() => {
+      pText.classList.replace("hidden", "appear");
+    }, 1000);
+
+    setTimeout(() => {
+      button.classList.replace("hidden", "appear");
+    }, 1500);
+  });
+
+
