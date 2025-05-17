@@ -45,14 +45,14 @@ let isSticky = false;
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   
-  if (scrollY > 100 && !isSticky) {
+  if (scrollY > 90 && !isSticky) {
     meniu.classList.add('sticky');
     meniu.style.top = '0';  
     placeholder.style.height = meniu.offsetHeight + 'px'; 
     isSticky = true;
   } 
   
-  else if (scrollY <= 100 && isSticky) {
+  else if (scrollY <= 90 && isSticky) {
     meniu.classList.remove('sticky');
     meniu.style.top = '-100px';  
     placeholder.style.height = '0px'; 
