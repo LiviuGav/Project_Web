@@ -1,0 +1,157 @@
+.deal-row {
+  display: flex;
+  background-color: #fff;
+  padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col1 {
+        flex:50%
+}
+.col2 {
+        flex:50.75%
+}
+.images-grid ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 798px;
+}
+
+.images-grid ul li {
+    width: 50%;
+    float: left;
+    height: 50%;
+}
+
+.images-grid ul li a {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.images-grid .grid-1 {
+    background-image: url(images/grid_1.jpg);
+}
+.images-grid .grid-2 {
+    background-image: url(images/grid_2.jpg);
+}
+.images-grid .grid-3 {
+    background-image: url(images/grid_3.jpg);
+}
+.images-grid .grid-4 {
+    background-image: url(images/grid_4.jpg);
+}
+
+.countdown {
+    text-align: center;
+    padding: 50px 12% 62px;
+}
+
+.countdown h4 {
+    font-family: Pacifico, cursive;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #79cba8;
+    margin: 15px 0 0;
+    padding: 0;
+}
+.countdown h2 {
+    margin: 12px 0 0;
+    padding: 0;
+}
+.countdown h2, .inheader-sh-title h2 {
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.countdown .price {
+    font-size: 34px;
+    font-weight: 700;
+    color: #79cba8;
+    margin: 35px 0 0;
+}
+
+.countdown .ds {
+    margin: 15px 0 0;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #696969;
+    background-color: #fff;
+    font-weight: 400;
+}
+.countdown .countdown_is {
+    margin-top: 25px;
+}
+
+.countdown .countdown-section {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #79cba8;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 24px 0;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #696969;
+    background-color: #fff;
+    font-weight: 400;
+}
+
+.countdown .countdown-section .countdown-amount {
+    font-size: 30px;
+    display: block;
+    line-height: 40px;
+    font-weight: 500;
+    color: #212121;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.countdown .price em {
+    font-size: 18px;
+    color: #696969;
+    font-family: Pacifico, cursive;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    vertical-align: top;
+    position: relative;
+    top: 4px;
+    padding-right: 6px;
+}
+.thumb {
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px){
+ .deal-row {
+  display: block;
+  padding-right: 0px;
+  padding-left: 0px;
+  
+}
+}
+
+@media screen and (max-width: 480px){
+    .images-grid ul li {
+    width: 100%;
+    float: right;
+    height: 50%;
+}
+}
+
+
+
+
