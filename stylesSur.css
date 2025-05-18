@@ -1,32 +1,38 @@
-.surprise{
-    display: flex;
+.surprise {
+    display: none;
 }
 
-.surprise-1,.surprise-2{
-    position: absolute;
+.surprise-1,
+.surprise-2 {
+    display: block; 
+    position: fixed;
     background-color: #EFE6D6;
     color: black;
-    width: 50%;
+    width: 50vw;
+    height: 100vh;
     z-index: 2;
-    height: 100%;
     top: 0;
-  
+    pointer-events: none;
 }
-.surprise-1{ 
-    left: -50%;
+
+.surprise-1 {
+    left: -50vw;
     transition: left 0.5s ease;
 }
-.surprise-2{
-    right: -50%;
+
+.surprise-2 {
+    right: -50vw;
     transition: right 0.5s ease;
 }
 
-.gate1{ 
+.gate1 {
     left: 0;
 }
-.gate2{  
+
+.gate2 {
     right: 0;
 }
+
 
 #text_tastat{
   position: absolute;

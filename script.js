@@ -149,12 +149,16 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
   const query = document.getElementById("searchInput").value.trim().toUpperCase();
   
   if (query.includes("IUSTIN")) {
-    searchHeader.style.display = "none";
-    surprise1.classList.toggle('gate1');
-    surprise2.classList.toggle('gate2');
+  searchHeader.style.display = "none";
+  document.querySelector(".surprise").style.display = "flex"; 
 
-    setTimeout(() => {
-    typewriter();
+  setTimeout(() => {
+  surprise1.classList.add('gate1');
+  surprise2.classList.add('gate2');
+}, 50); 
+
+  setTimeout(() => {
+  typewriter();
   }, 1000);
 
   } else {
