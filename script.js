@@ -1,6 +1,24 @@
 const menuToggle = document.getElementById('menu-toggle');
 const sidebar = document.getElementById('sidebar');
 const pageContent = document.querySelector('.page-content');
+const surprise = document.querySelector(".surprise");
+const searchHeader = document.querySelector(".search-header");
+const surprise1 = document.querySelector(".surprise-1");
+const surprise2 = document.querySelector(".surprise-2");
+
+// set up text to print, each item in array is new line
+var aText = new Array(
+"La multi ani Iustin!",
+"Sa ai parte de tot ce e mai bun in viata!",
+);
+var iSpeed = 100; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
 
 menuToggle.addEventListener('click', () => {
   const scrollY = window.scrollY; 
@@ -108,7 +126,7 @@ function updateCountdown() {
 
 updateCountdown();
 
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const pTitle = document.querySelector(".p-title");
     const pText = document.querySelector(".p-text");
     const button = document.querySelector(".button");
@@ -125,5 +143,50 @@ updateCountdown();
       button.classList.replace("hidden", "appear");
     }, 1500);
   });
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const query = document.getElementById("searchInput").value.trim().toUpperCase();
+  
+  if (query.includes("IUSTIN")) {
+    searchHeader.style.display = "none";
+    surprise1.classList.toggle('gate1');
+    surprise2.classList.toggle('gate2');
+
+    setTimeout(() => {
+    typewriter();
+  }, 1000);
+
+  } else {
+    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+  }
+  
+});
+
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("text_tastat");
+ destination.style.padding = "10px 50px";
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+
+
 
 

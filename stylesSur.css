@@ -1,0 +1,39 @@
+.surprise{
+    display: flex;
+}
+
+.surprise-1,.surprise-2{
+    position: absolute;
+    background-color: #EFE6D6;
+    color: black;
+    width: 50%;
+    z-index: 2;
+    height: 100%;
+    top: 0;
+  
+}
+.surprise-1{ 
+    left: -50%;
+    transition: left 0.5s ease;
+}
+.surprise-2{
+    right: -50%;
+    transition: right 0.5s ease;
+}
+
+.gate1{ 
+    left: 0;
+}
+.gate2{  
+    right: 0;
+}
+
+#text_tastat{
+  position: absolute;
+  font-family: 'Waiting for the Sunrise', cursive; 
+  font-size:30px; 
+  letter-spacing: 6px; 
+  font-weight: bold;
+  z-index: 4;
+  color: #27221f;
+}

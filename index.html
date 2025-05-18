@@ -8,8 +8,13 @@
   <link rel="stylesheet" href="styles2.css">
   <link rel="stylesheet" href="styles3.css">
   <link rel="stylesheet" href="styles4.css">
+  <link rel="stylesheet" href="stylesSur.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Pacifico:100,300,400,700,900,300italic,400italic,700italic,900italic" type="text/css" media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
   <script src="script.js" defer></script>
   <title>Home Bakery</title>
 </head>
@@ -27,7 +32,13 @@
     </ul>
   </div>
 
+  <div class="surprise">
+    <div class="surprise-1"></div>
+    <div class="surprise-2"></div>
+  </div>
+
   <div class="page-content">
+    <div id="text_tastat"></div>
     <div class="part1">
     <header>
       <div class="meniu">
@@ -50,7 +61,7 @@
           <div class="search-header" style="display: none;">
             <div class="remove-form"></div>
             <div class="container">
-              <form class="form-horizontal">
+              <form id="searchForm" class="form-horizontal">
                 <label class="note-search">Type and Press Enter to Search</label>
                 <input type="search" name="s" class="form-control" id="searchInput" value="" placeholder="">
                 <input type="submit" value="Search">
